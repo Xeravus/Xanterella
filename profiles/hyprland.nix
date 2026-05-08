@@ -23,6 +23,7 @@
       screenshots.enable = true;
       sddm.enable = true;
       spicetify.enable = true;
+      swww.enable = true;
       vscode.enable = true;
       yazi.enable = true;
       zen-browser.enable = true;

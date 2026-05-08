@@ -18,6 +18,7 @@
     ./screenshots.nix
     ./sddm.nix
     ./spicetify.nix
+    ./swww.nix
     ./vscode.nix
     ./yazi.nix
     ./zen-browser.nix
