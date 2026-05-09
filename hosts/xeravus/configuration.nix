@@ -9,6 +9,7 @@
     ./../../profiles/boot.nix
     ./../../profiles/essentials.nix
     ./../../profiles/hyprland.nix
+    ./../../profiles/dev.nix
     ./../../profiles/vault.nix
     ./../../profiles/cybersec.nix
     ./../../profiles/creative.nix

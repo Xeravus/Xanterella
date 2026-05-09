@@ -8,6 +8,7 @@
     ./../../modules
     ./../../profiles/boot.nix
     ./../../profiles/essentials.nix
+    ./../../profiles/dev.nix
     ./../../profiles/hyprland.nix
     ./../../profiles/vault.nix
   ];

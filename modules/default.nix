@@ -3,6 +3,7 @@
     ./boot
     ./cybersec
     ./desktop
+    ./dev
     ./essentials
     ./games
     ./vault
