@@ -16,6 +16,7 @@
       hyprpicker.enable = true;
       kitty.enable = true;
       nix-switcher.enable = true;
+      nix-timetracker.enable = true;
       plymouth.enable = true;
       psmisc.enable = true;
       pulsemixer.enable = true;

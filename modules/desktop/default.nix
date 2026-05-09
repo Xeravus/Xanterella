@@ -11,6 +11,7 @@
     ./hyprpicker.nix
     ./kitty.nix
     ./nix-switcher.nix
+    ./nix-timetracker.nix
     ./plymouth.nix
     ./psmisc.nix
     ./pulsemixer.nix
