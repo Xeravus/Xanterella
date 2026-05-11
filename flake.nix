@@ -73,6 +73,7 @@
               "pcie_brcmstb" # Der PCIe-Controller des Raspberry Pi 5
               "nvme" # Wichtig, falls du später eine NVMe-SSD an den Pi 5 hängst
             ];
+            sdImage.firmwareSize = 1024;
 
             xanterella.boot.enable = lib.mkForce false;
           })
