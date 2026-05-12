@@ -11,6 +11,7 @@
   config = lib.mkIf config.xanterella.ssh.enable {
     environment.systemPackages = with pkgs; [
       openssh
+      kitty.terminfo
     ];
     services = {
       openssh = {
