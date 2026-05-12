@@ -8,7 +8,7 @@
     ./../../modules
     ./../../profiles/boot-server.nix
     ./../../profiles/essentials.nix
-    #    ./../../profiles/server.nix
+    ./../../profiles/server.nix
   ];
 
   networking.hostName = "vicuna";
