@@ -120,7 +120,7 @@
       };
       vicuna = {
         deployment = {
-          targetHost = "192.168.178.78";
+          targetHost = "192.168.178.30";
           targetUser = taruser;
           buildOnTarget = false;
           keys = {
