@@ -15,6 +15,7 @@
     ./nix-timetracker.nix
     ./plymouth.nix
     ./psmisc.nix
+    ./pomodoro.nix
     ./pulsemixer.nix
     ./quickshell.nix
     ./screenshots.nix

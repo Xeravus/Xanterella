@@ -19,6 +19,7 @@
       nix-switcher.enable = true;
       nix-timetracker.enable = true;
       plymouth.enable = true;
+      pomodoro.enable = true;
       psmisc.enable = true;
       pulsemixer.enable = true;
       quickshell.enable = true;
