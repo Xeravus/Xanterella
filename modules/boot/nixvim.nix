@@ -94,6 +94,7 @@
           enable = true;
           keymaps = {
             "<C-n>" = "find_files";
+            "<A-f>" = "live_grep";
           };
           settings = {
             defaults = {
