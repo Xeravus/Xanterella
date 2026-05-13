@@ -16,6 +16,10 @@
       url = "github:romkatv/powerlevel10k";
       flake = false;
     };
+    pomo-src = {
+      url = "github:Bahaaio/pomo";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -23,6 +27,7 @@
     nixpkgs,
     nix-programs,
     colmena,
+    pomo-src,
     ...
   } @ inputs: let
     systemarch = "x86_64-linux";

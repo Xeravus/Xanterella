@@ -3,6 +3,7 @@
   pkgs,
   lib,
   inputs,
+  zsh-src,
   ...
 }: {
   options = {

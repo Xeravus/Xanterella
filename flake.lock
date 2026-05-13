@@ -271,11 +271,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1778696419,
-        "narHash": "sha256-LQFF2/Ij5cUiG2+CjaG0XgrRXnctFwvSZNjtQ9ZYW94=",
+        "lastModified": 1778710845,
+        "narHash": "sha256-y5Hbo0vd/JsiVBV2CN6E6xZqLFS1KZig5sJ3HICdFu4=",
         "owner": "TheGoatPrime234",
         "repo": "Nixos_programs",
-        "rev": "8ebb59379ab61a78598310be361edf758c2f8ae6",
+        "rev": "548c748512e2adf38c33be4b5e3c251e88bf3069",
         "type": "github"
       },
       "original": {
@@ -487,6 +487,22 @@
         "type": "github"
       }
     },
+    "pomo-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1773439417,
+        "narHash": "sha256-gQ7bHQGaQPujpOwVdcwKgiYQjUECi/Pjt5LKwa1v1J8=",
+        "owner": "Bahaaio",
+        "repo": "pomo",
+        "rev": "d2c59a04f1a23eb3897ac4fb31ecc7cd7c23c182",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Bahaaio",
+        "repo": "pomo",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "alejandra": "alejandra",
@@ -497,6 +513,7 @@
         "nixpkgs-25-11": "nixpkgs-25-11",
         "nixvim": "nixvim",
         "p10k-src": "p10k-src",
+        "pomo-src": "pomo-src",
         "spicetify-nix": "spicetify-nix",
         "zen-browser": "zen-browser"
       }
