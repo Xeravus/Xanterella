@@ -15,9 +15,9 @@
     systemd = {
       tmpfiles = {
         rules = [
-          "d /mnt/data/nix/audiobookshelf/metadata 0750 audiobookshelf audiobookshelf -"
-          "d /mnt/data/nix/audiobookshelf/audiobooks 0750 audiobookshelf audiobookshelf -"
-          "d /mnt/data/nix/audiobookshelf/podcasts 0750 audiobookshelf audiobookshelf -"
+          "d /mnt/server-data/nix/audiobookshelf/metadata 0750 audiobookshelf audiobookshelf -"
+          "d /mnt/server-data/nix/audiobookshelf/audiobooks 0750 audiobookshelf audiobookshelf -"
+          "d /mnt/server-data/nix/audiobookshelf/podcasts 0750 audiobookshelf audiobookshelf -"
         ];
       };
     };
@@ -27,9 +27,9 @@
         host = "0.0.0.0";
         port = 13378;
         openFirewall = true;
-        dataDir = "/mnt/data/nix/audiobookshelf/metadata";
+        dataDir = "/mnt/server-data/nix/audiobookshelf/metadata";
       };
-    };
+    }
     networking = {
       firewall = {
         allowedTCPPorts = [

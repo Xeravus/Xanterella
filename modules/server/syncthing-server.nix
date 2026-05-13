@@ -15,9 +15,9 @@
     systemd = {
       tmpfiles = {
         rules = [
-          "d /mnt/data/nix/syncthing 0750 syncthing syncthing -"
-          "d /mnt/data/nix/syncthing/data 0750 syncthing syncthing -"
-          "d /mnt/data/nix/syncthing/config 0750 syncthing syncthing -"
+          "d /mnt/server-data/nix/syncthing 0750 syncthing syncthing -"
+          "d /mnt/server-data/nix/syncthing/data 0750 syncthing syncthing -"
+          "d /mnt/server-data/nix/syncthing/config 0750 syncthing syncthing -"
         ];
       };
     };
@@ -25,8 +25,8 @@
       syncthing = {
         enable = true;
         systemService = true;
-        dataDir = "/mnt/data/nix/syncthing/data";
-        configDir = "/mnt/data/nix/syncthing/config";
+        dataDir = "/mnt/server-data/nix/syncthing/data";
+        configDir = "/mnt/server-data/nix/syncthing/config";
         user = "syncthing";
         group = "syncthing";
         guiAddress = "0.0.0.0:8384";

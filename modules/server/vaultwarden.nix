@@ -17,14 +17,14 @@
         vaultwarden = {
           serviceConfig = {
             ReadWritePaths = [
-              "/mnt/data/nix/vaultwarden"
+              "/mnt/server-data/nix/vaultwarden"
             ];
           };
         };
       };
       tmpfiles = {
         rules = [
-          "d /mnt/data/nix/vaultwarden 0750 vaultwarden vaultwarden -"
+          "d /mnt/server-data/nix/vaultwarden 0750 vaultwarden vaultwarden -"
         ];
       };
     };
@@ -32,7 +32,7 @@
       vaultwarden = {
         enable = true;
         config = {
-          DATA_FOLDER = "/mnt/data/nix/vaultwarden";
+          DATA_FOLDER = "/mnt/server-data/nix/vaultwarden";
           ROCKET_ADDRESS = "0.0.0.0";
           ROCKET_PORT = 8222;
         };

@@ -15,14 +15,14 @@
     systemd = {
       tmpfiles = {
         rules = [
-          "d /mnt/data/nix/grafana 0750 grafana grafana -"
+          "d /mnt/server-data/nix/grafana 0750 grafana grafana -"
         ];
       };
     };
     services = {
       grafana = {
         enable = true;
-        dataDir = "/mnt/data/nix/grafana";
+        dataDir = "/mnt/server-data/nix/grafana";
         settings = {
           server = {
             http_addr = "0.0.0.0";
