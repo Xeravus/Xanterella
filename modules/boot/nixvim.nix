@@ -110,6 +110,9 @@
               live-grep-args = {
                 enable = true;
               };
+              file-browser = {
+                enable = true;
+              };
             };
           };
         };
