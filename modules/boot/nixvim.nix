@@ -76,6 +76,9 @@
         vim-be-good.enable = true;
         hardtime.enable = true;
         highlight-colors.enable = true;
+        neogit.enable = true;
+        gitsigns.enable = true;
+	lazygit.enable = true;
         web-devicons.enable = true;
         conform-nvim = {
           settings = {
