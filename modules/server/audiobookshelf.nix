@@ -12,14 +12,11 @@
     environment.systemPackages = with pkgs; [
       audiobookshelf
     ];
-    systemd = {
-      tmpfiles = {
-        rules = [
-          "d /mnt/server-data/nix/audiobookshelf/metadata 0750 audiobookshelf audiobookshelf -"
-          "d /mnt/server-data/nix/audiobookshelf/audiobooks 0750 audiobookshelf audiobookshelf -"
-          "d /mnt/server-data/nix/audiobookshelf/podcasts 0750 audiobookshelf audiobookshelf -"
-        ];
-      };
+    fileSystems."/var/lib/audiobookshelf" = {
+      device = "/mnt/server-data/nix/audiobookshelf";
+      options = ["bind"];
+      # Sagt NixOS, dass es erst die Hauptfestplatte mounten muss, bevor dieser Mount passiert
+      depends = ["/mnt/server-data"];
     };
     services = {
       audiobookshelf = {
