@@ -22,4 +22,5 @@
       "x-systemd.device-timeout=5s"
     ];
   };
+  system.stateVersion = "25-11";
 }
