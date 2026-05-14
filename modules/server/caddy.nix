@@ -18,12 +18,12 @@
         virtualHosts = {
           "vicuna.gute-nessie.ts.net" = {
             extraConfig = ''
-              handle /audiobookshelf* {
+                        handle /audiobookshelf* {
               reverse_proxy localhost:13378 # Audiobookshelf
-              }
-                     handle /* {
+                        }
+                 handle /* {
               reverse_proxy localhost:8222 # Vaultwarden(Zumindest bald)
-              }
+                        }
             '';
           };
         };
