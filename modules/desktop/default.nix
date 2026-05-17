@@ -11,19 +11,19 @@
     ./hyprpaper.nix
     ./hyprpicker.nix
     ./kitty.nix
+    ./nitch.nix
     ./nix-switcher.nix
     ./nix-timetracker.nix
     ./plymouth.nix
-    ./psmisc.nix
     ./pomodoro.nix
+    ./psmisc.nix
     ./pulsemixer.nix
     ./quickshell.nix
-    ./tldr.nix
     ./screenshots.nix
     ./sddm.nix
     ./spicetify.nix
     ./swww.nix
-    ./vscode.nix
+    ./tldr.nix
     ./yazi.nix
     ./zen-browser.nix
   ];
