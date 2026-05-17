@@ -8,7 +8,7 @@
   ...
 }: {
   meta = {
-    nixpkgs = import nixpkgs {
+    nixpkgs = import inputs.nixpkgs {
       system = systemarch;
       config.allowUnfree = true;
       purity = "impure";
