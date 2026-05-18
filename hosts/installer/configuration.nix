@@ -4,7 +4,7 @@
   inputs,
   ...
 }: let
-  secrets = import ./../../modules/agenix/usb-secrets.nix;
+  secrets = import "/home/cato/nixos-config/modules/agenix/usb-secrets.nix";
 in {
   imports = [
     "${inputs.nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
