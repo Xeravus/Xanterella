@@ -8,6 +8,7 @@
 in {
   imports = [
     "${inputs.nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
+    ./../../profiles/installer.nix
   ];
   isoImage = {
     squashfsCompression = "zstd";
