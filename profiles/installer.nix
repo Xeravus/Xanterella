@@ -5,7 +5,9 @@
 }: {
   config = {
     xanterella = {
-      local.enable = true;
+      local = {
+        enable = true;
+      };
     };
   };
 }
