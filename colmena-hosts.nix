@@ -44,6 +44,18 @@
       ./hosts/xorus/configuration.nix
     ];
   };
+  megatron = {
+    deployment = {
+      targetHost = "192.168.178.34";
+      targetUser = taruser;
+      buildOnTarget = false;
+      keys = commonSSHKeys;
+    };
+    imports = [
+      ./profiles/ssh-keys.nix
+      ./hosts/xorus/configuration.nix
+    ];
+  };
   vicuna = {
     deployment = {
       targetHost = "192.168.178.30";
