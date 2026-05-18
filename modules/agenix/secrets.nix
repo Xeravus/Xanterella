@@ -9,6 +9,6 @@ let
   ];
 in {
   "global.age" = {
-    publicKeys = user ++ systems;
+    publicKeys = users ++ systems;
   };
 }
