@@ -8,6 +8,7 @@
   secrets = import "/home/cato/nixos-config/modules/agenix/usb-secrets.nix";
 in {
   imports = [
+    inputs.disko.nixosModules.disko
     ./../../modules
     ./../../profiles/installer.nix
     ./../../profiles/gnome.nix
