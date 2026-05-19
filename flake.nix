@@ -115,7 +115,7 @@
       willma = nixpkgs.lib.nixosSystem {
         system = systemarch;
         specialArgs = {inherit inputs pkgs-new pkgs-unstable;};
-        mdoules = [
+        modules = [
           ./hosts/willma/configuration.nix
           ./profiles/ssh-keys.nix
         ];
