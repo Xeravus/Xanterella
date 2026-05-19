@@ -8,6 +8,9 @@
       local = {
         enable = true;
       };
+      geistmono = {
+        enable = true;
+      };
     };
   };
 }
