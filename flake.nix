@@ -112,6 +112,14 @@
           ./profiles/ssh-keys.nix
         ];
       };
+      willma = nixpkgs.lib.nixosSystem {
+        system = systemarch;
+        specialArgs = {inherit inputs pkgs-new pkgs-unstable;};
+        mdoules = [
+          ./hosts/willma/configuration.nix
+          ./profiles/ssh-keys.nix
+        ];
+      };
     };
     colmena = import ./colmena-hosts.nix {
       inherit inputs systemarch taruser commonSSHKeys pkgs-new pkgs-unstable;
