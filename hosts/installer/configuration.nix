@@ -86,7 +86,7 @@ in {
           sleep 1
           done
 
-          ${pkgs.tailscale}/bin/tailscale up --auth-key "${secrets.tailscalekey}" --unattended
+          ${pkgs.tailscale}/bin/tailscale up --auth-key "${secrets.tailscalekey}"
         '';
       };
     };
