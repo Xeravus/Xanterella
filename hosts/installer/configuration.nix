@@ -10,6 +10,7 @@ in {
   imports = [
     ./../../modules
     ./../../profiles/installer.nix
+    ./../../profiles/gnome.nix
     "${inputs.nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
   ];
   isoImage = {
@@ -17,19 +18,34 @@ in {
   };
 
   networking = {
-    wireless = {
+    networkmanager = {
       enable = true;
-      networks = {
-        "${secrets.wifiSsid}" = {
-          psk = secrets.wifiPassword;
+      ensureProfiles = {
+        profiles = {
+          "${secrets.wifiSsid}" = {
+            connection = {
+              id = secrets.wifiSsid;
+              type = "wifi";
+            };
+            wifi = {
+              mode = "infrastructure";
+              ssid = secrets.wifiSsid;
+            };
+            wifi-security = {
+              key-mgmt = "wpa-psk";
+              psk = secrets.wifiPassword;
+            };
+            ipv4 = {
+              method = "auto";
+            };
+            ipv6 = {
+              method = "auto";
+            };
+          };
         };
       };
     };
-    networkmanager = {
-      enable = false;
-    };
   };
-
   services = {
     openssh = {
       enable = true;

@@ -12,7 +12,7 @@
     git add -A
     alejandra -q *
     nix flake update nix-programs
-    nh os switch . -H xeravus --show-trace
+    nh os switch . -H xeravus
 
     if [ -z "$1" ]; then
             COMMIT_MSG="Auto-Rebuild: $(date +'%Y-%m-%d %H:%M:%S')"
