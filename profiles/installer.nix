@@ -11,6 +11,12 @@
       geistmono = {
         enable = true;
       };
+      kitty = {
+        enable = true;
+      };
+      zsh = {
+        enable = true;
+      };
     };
   };
 }
