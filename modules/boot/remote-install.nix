@@ -15,6 +15,7 @@
     TARGET_IP=$1
 
     echo "Starte Installation auf $TARGET_IP..."
+    ssh root@$TARGET_IP 'echo "unsetopt nomatch" > ~/.zshenv'
     sleep 3
     nix run github:numtide/nixos-anywhere -- --flake .#willma root@$TARGET_IP
   '';
