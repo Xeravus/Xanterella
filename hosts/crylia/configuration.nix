@@ -9,8 +9,8 @@
     ./../../profiles/boot.nix
     ./../../profiles/essentials.nix
     ./../../profiles/desktop.nix
-    ./../../modules/boot/disko.nix
+    ./disko.nix
   ];
-  networking.hostName = "willma";
+  networking.hostName = "crylia";
   system.stateVersion = "25.11"; # Did you read the comment?
 }

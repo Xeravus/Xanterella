@@ -19,7 +19,7 @@
     ssh root@$TARGET_IP 'notify-send "Starte Remote-Install"'
     notify-send "Starte Remote-Install"
     sleep 3
-    nix run github:numtide/nixos-anywhere -- --flake .#willma root@$TARGET_IP
+    nix run github:numtide/nixos-anywhere -- --flake .#crylia root@$TARGET_IP
   '';
 in {
   options.xanterella.remote-install = {

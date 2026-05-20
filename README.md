@@ -24,7 +24,7 @@ Diese Host sind zurzeit zur Verfügung und eine kleine Erklärung, für jeden ei
     - Host verwaltung(coming soon)
 5. Installer
     - Installer/Live USB Stick
-6. Willma(vielleicht bald anderer Name)
+6. Crylia
     - Tempräre Nixos Umgebung
     - Wird vom Installer installiert
     - Reiner Übergang

@@ -1,5 +1,6 @@
 {
   imports = [
+    ./installer
     ./agenix.nix
     ./boot.nix
     ./boot-server.nix
@@ -9,7 +10,6 @@
     ./network.nix
     ./nix.nix
     ./nixvim.nix
-    ./remote-install.nix
     ./ssh.nix
   ];
 }
