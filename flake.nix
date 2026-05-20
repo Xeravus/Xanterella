@@ -117,7 +117,7 @@
         specialArgs = {inherit inputs pkgs-new pkgs-unstable;};
         modules = [
           inputs.disko.nixosModules.disko
-          ./modules/boot/disko.nix
+          ./disko.nix
           ./hosts/crylia/configuration.nix
           ./profiles/ssh-keys.nix
         ];
