@@ -46,7 +46,7 @@
   };
   megatron = {
     deployment = {
-      targetHost = "192.168.178.34";
+      targetHost = "crylia";
       targetUser = taruser;
       buildOnTarget = false;
       keys = commonSSHKeys;
