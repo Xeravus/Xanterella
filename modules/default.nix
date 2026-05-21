@@ -10,5 +10,6 @@
     ./vault
     ./creative
     ./server
+    ./nixconf
   ];
 }

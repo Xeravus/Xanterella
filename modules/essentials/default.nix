@@ -1,15 +1,12 @@
 {
   imports = [
-    ./alejandra.nix
     ./audio.nix
     ./bluetooth.nix
     ./btop.nix
     ./dbus.nix
-    ./direnv.nix
     ./firewall.nix
     ./geistmono.nix
     ./libnotify.nix
-    ./restituo.nix
     ./sl.nix
     ./tailscale.nix
     ./tree.nix
