@@ -5,12 +5,18 @@
   ...
 }: {
   options = {
-    xanterella.nmap.enable = lib.mkEnableOption "Aktiviert nmap";
+    xanterella = {
+      nmap = {
+        enable = lib.mkEnableOption "Aktiviert nmap";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.nmap.enable {
-    environment.systemPackages = with pkgs; [
-      nmap
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        nmap
+      ];
+    };
   };
 }

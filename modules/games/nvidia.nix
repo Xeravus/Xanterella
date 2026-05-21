@@ -5,7 +5,11 @@
   ...
 }: {
   options = {
-    xanterella.nvidia.enable = lib.mkEnableOption "Aktiviere Nvidia Support und Nvidia Driver";
+    xanterella = {
+      nvidia = {
+        enable = lib.mkEnableOption "Aktiviere Nvidia Support und Nvidia Driver";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.nvidia.enable {

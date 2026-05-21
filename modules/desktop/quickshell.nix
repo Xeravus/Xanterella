@@ -6,15 +6,23 @@
   ...
 }: {
   options = {
-    xanterella.quickshell.enable = lib.mkEnableOption "Aktiviert quickshell";
+    xanterella = {
+      quickshell = {
+        enable = lib.mkEnableOption "Aktiviert quickshell";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.quickshell.enable {
-    environment.systemPackages = with pkgs-new; [
-      quickshell
-    ];
-    environment.variables = {
-      QML_XHR_ALLOW_FILE_READ = "1";
+    environment = {
+      systemPackages = with pkgs-new; [
+        quickshell
+      ];
+    };
+    environment = {
+      variables = {
+        QML_XHR_ALLOW_FILE_READ = "1";
+      };
     };
   };
 }

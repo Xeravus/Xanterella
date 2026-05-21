@@ -5,12 +5,18 @@
   ...
 }: {
   options = {
-    xanterella.btop.enable = lib.mkEnableOption "Aktiviert btop";
+    xanterella = {
+      btop = {
+        enable = lib.mkEnableOption "Aktiviert btop";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.btop.enable {
-    environment.systemPackages = with pkgs; [
-      btop
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        btop
+      ];
+    };
   };
 }

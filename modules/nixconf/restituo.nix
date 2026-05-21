@@ -32,14 +32,20 @@
     echo ""
   '';
 in {
-  options.xanterella.restituo = {
-    enable = lib.mkEnableOption "Aktiviert das Rebuild Script";
+  options = {
+    xanterella = {
+      restituo = {
+        enable = lib.mkEnableOption "Aktiviert das Rebuild Script";
+      };
+    };
   };
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      restituo
-      nh
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        restituo
+        nh
+      ];
+    };
     programs = {
       nh = {
         enable = true;

@@ -6,13 +6,19 @@
   ...
 }: {
   options = {
-    xanterella.vaultwarden.enable = lib.mkEnableOption "Aktiviert vaultwarden";
+    xanterella = {
+      vaultwarden = {
+        enable = lib.mkEnableOption "Aktiviert vaultwarden";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.vaultwarden.enable {
-    environment.systemPackages = with pkgs-unstable; [
-      vaultwarden
-    ];
+    environment = {
+      systemPackages = with pkgs-unstable; [
+        vaultwarden
+      ];
+    };
     systemd = {
       services = {
         vaultwarden = {

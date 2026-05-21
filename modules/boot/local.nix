@@ -5,7 +5,11 @@
   ...
 }: {
   options = {
-    xanterella.local.enable = lib.mkEnableOption "Aktiviert local";
+    xanterella = {
+      local = {
+        enable = lib.mkEnableOption "Aktiviert local";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.local.enable {

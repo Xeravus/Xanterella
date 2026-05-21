@@ -73,11 +73,15 @@
     systemarch = "x86_64-linux";
     pkgs-new = import inputs.nixpkgs-new {
       system = systemarch;
-      config.allowUnfree = true;
+      config = {
+        allowUnfree = true;
+      };
     };
     pkgs-unstable = import inputs.nixpkgs-unstable {
       system = systemarch;
-      config.allowUnfree = true;
+      config = {
+        allowUnfree = true;
+      };
     };
     taruser = "root";
     commonSSHKeys = {

@@ -5,16 +5,36 @@
 }: {
   config = {
     xanterella = {
-      agenix.enable = true;
-      remote-install.enable = true;
-      boot.enable = true;
-      colmena.enable = true;
-      git.enable = true;
-      local.enable = true;
-      network.enable = true;
-      nix.enable = true;
-      nixvim.enable = true;
-      ssh.enable = true;
+      agenix = {
+        enable = true;
+      };
+      remote-install = {
+        enable = true;
+      };
+      boot = {
+        enable = true;
+      };
+      colmena = {
+        enable = true;
+      };
+      git = {
+        enable = true;
+      };
+      local = {
+        enable = true;
+      };
+      network = {
+        enable = true;
+      };
+      nix = {
+        enable = true;
+      };
+      nixvim = {
+        enable = true;
+      };
+      ssh = {
+        enable = true;
+      };
     };
   };
 }

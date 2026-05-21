@@ -5,7 +5,11 @@
   ...
 }: {
   options = {
-    xanterella.gdm.enable = lib.mkEnableOption "Aktiviert gdm";
+    xanterella = {
+      gdm = {
+        enable = lib.mkEnableOption "Aktiviert gdm";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.gdm.enable {

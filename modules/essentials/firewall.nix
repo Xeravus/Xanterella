@@ -5,7 +5,11 @@
   ...
 }: {
   options = {
-    xanterella.firewall.enable = lib.mkEnableOption "Aktiviert firewall";
+    xanterella = {
+      firewall = {
+        enable = lib.mkEnableOption "Aktiviert firewall";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.firewall.enable {

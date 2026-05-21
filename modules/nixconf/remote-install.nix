@@ -24,12 +24,18 @@
     notify-send "Beendet Remote-Install"
   '';
 in {
-  options.xanterella.remote-install = {
-    enable = lib.mkEnableOption "Aktiviert das Remote-Install Script";
+  options = {
+    xanterella = {
+      remote-install = {
+        enable = lib.mkEnableOption "Aktiviert das Remote-Install Script";
+      };
+    };
   };
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      remote-install
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        remote-install
+      ];
+    };
   };
 }

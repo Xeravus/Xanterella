@@ -5,8 +5,12 @@
 }: {
   config = {
     xanterella = {
-      obsidian.enable = true;
-      syncthing.enable = true;
+      obsidian = {
+        enable = true;
+      };
+      syncthing = {
+        enable = true;
+      };
     };
   };
 }

@@ -5,7 +5,11 @@
   ...
 }: {
   options = {
-    xanterella.direnv.enable = lib.mkEnableOption "Aktiviert direnv";
+    xanterella = {
+      direnv = {
+        enable = lib.mkEnableOption "Aktiviert direnv";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.direnv.enable {

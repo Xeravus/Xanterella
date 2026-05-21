@@ -5,12 +5,18 @@
   ...
 }: {
   options = {
-    xanterella.sl.enable = lib.mkEnableOption "Aktiviert sl";
+    xanterella = {
+      sl = {
+        enable = lib.mkEnableOption "Aktiviert sl";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.sl.enable {
-    environment.systemPackages = with pkgs; [
-      sl
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        sl
+      ];
+    };
   };
 }

@@ -5,12 +5,18 @@
   ...
 }: {
   options = {
-    xanterella.nodejs.enable = lib.mkEnableOption "Aktiviert nodejs";
+    xanterella = {
+      nodejs = {
+        enable = lib.mkEnableOption "Aktiviert nodejs";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.nodejs.enable {
-    environment.systemPackages = with pkgs; [
-      nodejs
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        nodejs
+      ];
+    };
   };
 }

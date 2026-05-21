@@ -17,6 +17,10 @@
       enable = true;
     };
   };
-  networking.hostName = "crylia";
-  system.stateVersion = "25.11"; # Did you read the comment?
+  networking = {
+    hostName = "crylia";
+  };
+  system = {
+    stateVersion = "25.11"; # Did you read the comment?
+  };
 }

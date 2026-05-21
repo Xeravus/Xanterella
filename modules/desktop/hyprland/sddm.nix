@@ -21,7 +21,11 @@
   };
 in {
   options = {
-    xanterella.sddm.enable = lib.mkEnableOption "Aktiviert sddm";
+    xanterella = {
+      sddm = {
+        enable = lib.mkEnableOption "Aktiviert sddm";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.sddm.enable {
@@ -48,11 +52,13 @@ in {
         };
       };
     };
-    environment.systemPackages = with pkgs; [
-      pixie-sddm-theme
-      kdePackages.qtdeclarative
-      kdePackages.qtsvg
-      kdePackages.qt5compat
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        pixie-sddm-theme
+        kdePackages.qtdeclarative
+        kdePackages.qtsvg
+        kdePackages.qt5compat
+      ];
+    };
   };
 }

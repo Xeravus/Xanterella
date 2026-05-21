@@ -7,12 +7,22 @@
   ...
 }: {
   options = {
-    xanterella.zsh.enable = lib.mkEnableOption "Aktiviert zsh";
+    xanterella = {
+      zsh = {
+        enable = lib.mkEnableOption "Aktiviert zsh";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.zsh.enable {
-    environment.systemPackages = [pkgs.zsh-powerlevel10k];
-    users.defaultUserShell = pkgs.zsh;
+    environment = {
+      systemPackages = with pkgs; [
+        zsh-powerlevel10k
+      ];
+    };
+    users = {
+      defaultUserShell = pkgs.zsh;
+    };
     programs = {
       zsh = {
         enable = true;

@@ -10,13 +10,17 @@
   meta = {
     nixpkgs = import inputs.nixpkgs {
       system = systemarch;
-      config.allowUnfree = true;
+      config = {
+        allowUnfree = true;
+      };
       purity = "impure";
     };
     nodeNixpkgs = {
       vicuna = import inputs.nixpkgs {
         system = "aarch64-linux";
-        config.allowUnfree = true;
+        config = {
+          allowUnfree = true;
+        };
       };
     };
     specialArgs = {inherit inputs pkgs-new pkgs-unstable;};

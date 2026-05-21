@@ -5,12 +5,18 @@
   ...
 }: {
   options = {
-    xanterella.vscode.enable = lib.mkEnableOption "Aktiviert vscode";
+    xanterella = {
+      vscode = {
+        enable = lib.mkEnableOption "Aktiviert vscode";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.vscode.enable {
-    environment.systemPackages = with pkgs; [
-      vscode
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        vscode
+      ];
+    };
   };
 }

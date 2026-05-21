@@ -5,13 +5,19 @@
   ...
 }: {
   options = {
-    xanterella.caddy.enable = lib.mkEnableOption "Aktiviert caddy";
+    xanterella = {
+      caddy = {
+        enable = lib.mkEnableOption "Aktiviert caddy";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.caddy.enable {
-    environment.systemPackages = with pkgs; [
-      caddy
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        caddy
+      ];
+    };
     services = {
       caddy = {
         enable = true;

@@ -5,13 +5,19 @@
   ...
 }: {
   options = {
-    xanterella.dbus.enable = lib.mkEnableOption "Aktiviert dbus";
+    xanterella = {
+      dbus = {
+        enable = lib.mkEnableOption "Aktiviert dbus";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.dbus.enable {
-    environment.systemPackages = with pkgs; [
-      dbus
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        dbus
+      ];
+    };
     services = {
       dbus = {
         enable = true;

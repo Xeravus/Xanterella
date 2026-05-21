@@ -5,12 +5,18 @@
   ...
 }: {
   options = {
-    xanterella.metasploit.enable = lib.mkEnableOption "Aktiviert metasploit";
+    xanterella = {
+      metasploit = {
+        enable = lib.mkEnableOption "Aktiviert metasploit";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.metasploit.enable {
-    environment.systemPackages = with pkgs; [
-      metasploit
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        metasploit
+      ];
+    };
   };
 }

@@ -5,12 +5,18 @@
   ...
 }: {
   options = {
-    xanterella.wireshark.enable = lib.mkEnableOption "Aktiviert wireshark";
+    xanterella = {
+      wireshark = {
+        enable = lib.mkEnableOption "Aktiviert wireshark";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.wireshark.enable {
-    environment.systemPackages = with pkgs; [
-      wireshark
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        wireshark
+      ];
+    };
   };
 }

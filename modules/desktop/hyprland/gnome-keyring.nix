@@ -5,7 +5,11 @@
   ...
 }: {
   options = {
-    xanterella.gnome-keyring.enable = lib.mkEnableOption "Aktiviert gnome-keyring";
+    xanterella = {
+      gnome-keyring = {
+        enable = lib.mkEnableOption "Aktiviert gnome-keyring";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.gnome-keyring.enable {

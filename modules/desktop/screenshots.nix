@@ -10,15 +10,21 @@
     '';
 in {
   options = {
-    xanterella.screenshots.enable = lib.mkEnableOption "Aktiviert grim und slurp für screenshots";
+    xanterella = {
+      screenshots = {
+        enable = lib.mkEnableOption "Aktiviert grim und slurp für screenshots";
+      };
+    };
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      grim
-      slurp
-      wl-clipboard
-      hyprscreenshot
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        grim
+        slurp
+        wl-clipboard
+        hyprscreenshot
+      ];
+    };
   };
 }

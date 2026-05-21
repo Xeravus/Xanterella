@@ -5,13 +5,19 @@
   ...
 }: {
   options = {
-    xanterella.syncthing_server.enable = lib.mkEnableOption "Aktiviert syncthing_server";
+    xanterella = {
+      syncthing_server = {
+        enable = lib.mkEnableOption "Aktiviert syncthing_server";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.syncthing_server.enable {
-    environment.systemPackages = with pkgs; [
-      syncthing
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        syncthing
+      ];
+    };
     systemd = {
       tmpfiles = {
         rules = [

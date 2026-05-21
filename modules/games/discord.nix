@@ -5,12 +5,18 @@
   ...
 }: {
   options = {
-    xanterella.discord.enable = lib.mkEnableOption "Aktiviert discord";
+    xanterella = {
+      discord = {
+        enable = lib.mkEnableOption "Aktiviert discord";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.discord.enable {
-    environment.systemPackages = with pkgs; [
-      discord
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        discord
+      ];
+    };
   };
 }

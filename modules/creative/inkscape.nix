@@ -5,12 +5,18 @@
   ...
 }: {
   options = {
-    xanterella.inkscape.enable = lib.mkEnableOption "Aktiviert inkscape";
+    xanterella = {
+      inkscape = {
+        enable = lib.mkEnableOption "Aktiviert inkscape";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.inkscape.enable {
-    environment.systemPackages = with pkgs; [
-      inkscape
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        inkscape
+      ];
+    };
   };
 }

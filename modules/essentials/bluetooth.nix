@@ -5,7 +5,11 @@
   ...
 }: {
   options = {
-    xanterella.bluetooth.enable = lib.mkEnableOption "Aktiviert bluetooth";
+    xanterella = {
+      bluetooth = {
+        enable = lib.mkEnableOption "Aktiviert bluetooth";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.bluetooth.enable {
