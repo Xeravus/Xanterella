@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   lib,
   ...
 }: let
@@ -19,9 +20,11 @@ in {
 
   config = lib.mkMerge [
     (lib.mkIf config.xanterella.tailscale.enable {
-      environment.systemPackages = with pkgs; [
-        tailscale
-      ];
+      environment = {
+        systemPackages = with pkgs-unstable; [
+          tailscale
+        ];
+      };
       services = {
         tailscale = {
           enable = true;
@@ -43,6 +46,11 @@ in {
       };
     })
     (lib.mkIf config.xanterella.tailscale-installer.enable {
+      environment = {
+        systemPackages = with pkgs-unstable; [
+          tailscale
+        ];
+      };
       systemd = {
         services = {
           tailscale-autoconnect = {
