@@ -1,5 +1,6 @@
 {
   imports = [
+    ./apps
     ./boot
     ./cybersec
     ./desktop

@@ -5,7 +5,11 @@
   ...
 }: {
   options = {
-    xanterella.nix.enable = lib.mkEnableOption "Aktiviert nix";
+    xanterella = {
+      nix = {
+        enable = lib.mkEnableOption "Aktiviert nix";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.nix.enable {

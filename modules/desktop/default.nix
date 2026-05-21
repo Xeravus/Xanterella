@@ -2,22 +2,16 @@
   imports = [
     ./hyprland
     ./gnome
-    ./ani-cli.nix
     ./cava.nix
-    ./fastfetch.nix
-    ./gparted.nix
     ./kitty.nix
-    ./nitch.nix
     ./nix-switcher.nix
     ./nix-timetracker.nix
     ./plymouth.nix
-    ./pomodoro.nix
     ./power-profiles-daemon.nix
     ./psmisc.nix
     ./pulsemixer.nix
     ./quickshell.nix
     ./screenshots.nix
-    ./spicetify.nix
     ./tldr.nix
     ./yazi.nix
     ./zen-browser.nix

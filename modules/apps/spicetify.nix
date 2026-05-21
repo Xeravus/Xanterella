@@ -28,7 +28,11 @@ in {
     inputs.spicetify-nix.nixosModules.default
   ];
   options = {
-    xanterella.spicetify.enable = lib.mkEnableOption "Aktiviert spicetify";
+    xanterella = {
+      spicetify = {
+        enable = lib.mkEnableOption "Aktiviert spicetify";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.spicetify.enable {

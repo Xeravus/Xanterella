@@ -10,15 +10,21 @@
     inputs.nixvim.nixosModules.default
   ];
   options = {
-    xanterella.nixvim.enable = lib.mkEnableOption "Aktiviert Nixvim";
+    xanterella = {
+      nixvim = {
+        enable = lib.mkEnableOption "Aktiviert Nixvim";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.nixvim.enable {
-    environment.systemPackages = with pkgs; [
-      ripgrep
-      qt6.qtdeclarative
-      kdePackages.qtdeclarative
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        ripgrep
+        qt6.qtdeclarative
+        kdePackages.qtdeclarative
+      ];
+    };
     programs = {
       nixvim = {
         enable = true;
@@ -53,35 +59,67 @@
           {
             key = "<S-h>";
             action = "<cmd>bprevious<CR>";
-            options.desc = "Vorheriger Tab";
+            options = {
+              desc = "Vorheriger Tab";
+            };
           }
           {
             key = "<S-l>";
             action = "<cmd>bnext<CR>";
-            options.desc = "Nächster Tab";
+            options = {
+              desc = "Nächster Tab";
+            };
           }
           {
             key = "<leader>x";
             action = "<cmd>bdelete<CR>";
-            options.desc = "Aktuellen Tab schließen";
+            options = {
+              desc = "Aktuellen Tab schließen";
+            };
           }
         ];
 
-        colorschemes.catppuccin.enable = true;
-        colorschemes.catppuccin.autoLoad = true;
+        colorschemes = {
+          catppuccin = {
+            enable = true;
+            autoLoad = true;
+          };
+        };
 
         plugins = {
-          lualine.enable = true;
-          treesitter.enable = true;
-          neo-tree.enable = true;
-          bufferline.enable = true;
-          vim-be-good.enable = true;
-          hardtime.enable = true;
-          highlight-colors.enable = true;
-          neogit.enable = true;
-          gitsigns.enable = true;
-          lazygit.enable = true;
-          web-devicons.enable = true;
+          lualine = {
+            enable = true;
+          };
+          treesitter = {
+            enable = true;
+          };
+          neo-tree = {
+            enable = true;
+          };
+          bufferline = {
+            enable = true;
+          };
+          vim-be-good = {
+            enable = true;
+          };
+          hardtime = {
+            enable = true;
+          };
+          highlight-colors = {
+            enable = true;
+          };
+          neogit = {
+            enable = true;
+          };
+          gitsigns = {
+            enable = true;
+          };
+          lazygit = {
+            enable = true;
+          };
+          web-devicons = {
+            enable = true;
+          };
           conform-nvim = {
             settings = {
               format_on_save = {

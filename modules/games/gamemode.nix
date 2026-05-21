@@ -5,7 +5,11 @@
   ...
 }: {
   options = {
-    xanterella.gamemode.enable = lib.mkEnableOption "Aktiviert gamemode";
+    xanterella = {
+      gamemode = {
+        enable = lib.mkEnableOption "Aktiviert gamemode";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.gamemode.enable {

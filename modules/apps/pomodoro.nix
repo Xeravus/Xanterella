@@ -14,13 +14,19 @@
   };
 in {
   options = {
-    xanterella.pomodoro.enable = lib.mkEnableOption "Aktiviert pomodoro";
+    xanterella = {
+      pomodoro = {
+        enable = lib.mkEnableOption "Aktiviert pomodoro";
+      };
+    };
   };
 
   config = lib.mkIf config.xanterella.pomodoro.enable {
-    environment.systemPackages = [
-      pkgs.pom
-      pomo
-    ];
+    environment = {
+      systemPackages = [
+        pkgs.pom
+        pomo
+      ];
+    };
   };
 }
