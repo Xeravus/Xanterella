@@ -19,7 +19,7 @@
       flake = true;
     };
     nix-programs = {
-      url = "github:TheGoatPrime234/Nixos_programs/stable";
+      url = "github:Xeravus/Nixos_programs/stable";
       flake = true;
     };
     spicetify-nix = {

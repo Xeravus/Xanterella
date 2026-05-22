@@ -357,13 +357,13 @@
       "locked": {
         "lastModified": 1779008303,
         "narHash": "sha256-Pwe4OMVVQdf8Brha78aO9tia4dmKwrUmCHQGP4Zs/74=",
-        "owner": "TheGoatPrime234",
+        "owner": "Xeravus",
         "repo": "Nixos_programs",
         "rev": "1fedc116557abbcffd19245f3642755b42a6fc6d",
         "type": "github"
       },
       "original": {
-        "owner": "TheGoatPrime234",
+        "owner": "Xeravus",
         "ref": "stable",
         "repo": "Nixos_programs",
         "type": "github"
