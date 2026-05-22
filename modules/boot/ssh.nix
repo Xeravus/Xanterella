@@ -23,9 +23,18 @@
           kitty.terminfo
         ];
       };
+      programs = {
+        ssh = {
+          startAgent = true;
+        };
+      };
       services = {
         openssh = {
           enable = true;
+          startWhenNeeded = true;
+          settings = {
+            UseDns = true;
+          };
           authorizedKeysFiles = lib.mkForce [
             "/etc/ssh/authorized_keys.d/%u"
             ".ssh/authorized_keys"

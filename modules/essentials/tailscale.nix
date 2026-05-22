@@ -75,7 +75,7 @@ in {
               sleep 1
               done
 
-              ${pkgs.tailscale}/bin/tailscale up --auth-key "${secrets.tailscalekey}"
+              ${pkgs.tailscale}/bin/tailscale up --hostname installer --auth-key "${secrets.tailscalekey}"
             '';
           };
         };

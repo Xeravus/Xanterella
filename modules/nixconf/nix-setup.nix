@@ -13,6 +13,7 @@
     git config --global user.email "cato.jenisch@gmail.com"
     git config --global user.email
       gh auth login --hostname github.com --web -p https
+    sudo tailscale up --hostname crylia
   '';
 in {
   options = {
