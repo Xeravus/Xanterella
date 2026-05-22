@@ -81,6 +81,9 @@
         fastfetch = {
           enable = true;
         };
+        nix-setup = {
+          enable = true;
+        };
         browser = {
           librewolf = {
             enable = true;
