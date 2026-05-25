@@ -355,11 +355,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1779626984,
-        "narHash": "sha256-12smtmGwoUBegx1u3qSW9ZdICXV4O+KBP9TNKs2vur8=",
+        "lastModified": 1779703532,
+        "narHash": "sha256-bcXHvm4SGjyvvUVJnSCcY3Eoa629o3E2byPqJwKF5OE=",
         "owner": "Xeravus",
         "repo": "Nixos_programs",
-        "rev": "e4cda1c9a6e8273564712b3851d1c88252b23954",
+        "rev": "5c7e9f54be4b12958128c9efc6c0550ced698c65",
         "type": "github"
       },
       "original": {
