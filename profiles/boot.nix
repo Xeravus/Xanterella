@@ -32,7 +32,7 @@
       nixvim = {
         enable = true;
       };
-      ssh-installer = {
+      ssh = {
         enable = true;
       };
     };
