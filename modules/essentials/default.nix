@@ -6,6 +6,7 @@
     ./dbus.nix
     ./firewall.nix
     ./geistmono.nix
+    ./utils.nix
     ./libnotify.nix
     ./sl.nix
     ./tailscale.nix

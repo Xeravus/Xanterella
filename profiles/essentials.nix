@@ -29,6 +29,9 @@
       geistmono = {
         enable = true;
       };
+      utils = {
+        enable = true;
+      };
       libnotify = {
         enable = true;
       };

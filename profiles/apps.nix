@@ -47,6 +47,9 @@
         nitch = {
           enable = true;
         };
+        soomfon = {
+          enable = true;
+        };
         pomodoro = {
           enable = true;
         };
