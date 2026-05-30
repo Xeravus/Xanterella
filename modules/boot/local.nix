@@ -38,7 +38,11 @@
         cato = {
           isNormalUser = true;
           description = "Cato";
-          extraGroups = ["networkmanager" "wheel"];
+          extraGroups = [
+            "networkmanager"
+            "wheel"
+            "plugdev"
+          ];
           initialPassword = "xeravus";
         };
       };
