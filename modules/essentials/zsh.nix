@@ -86,7 +86,7 @@
         '';
         ohMyZsh = {
           enable = true;
-          plugins = ["git"]; # [cite: 55]
+          plugins = ["git"];
         };
       };
     };
