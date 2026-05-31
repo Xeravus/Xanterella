@@ -9,7 +9,7 @@
     tailscale status | grep tagged-devices
     read TARGET_IP
     cd
-    cd nixos-config
+    cd xanterella
     echo "Starte Installation auf $TARGET_IP..."
     ssh root@$TARGET_IP 'echo "unsetopt nomatch" > ~/.zshenv'
     notify-send "Starte Remote-Install"

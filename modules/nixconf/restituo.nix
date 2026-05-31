@@ -7,7 +7,7 @@
   cfg = config.xanterella.restituo;
   restituo = pkgs.writeShellScriptBin "restituo" ''
     set -e
-    cd ~/nixos-config
+    cd ~/xanterella
 
     git add -A
     alejandra -q *
@@ -49,7 +49,7 @@ in {
     programs = {
       nh = {
         enable = true;
-        flake = "/home/cato/nixos-config/";
+        flake = "/home/cato/xanterella/";
       };
     };
   };
