@@ -33,6 +33,9 @@
         autosuggestions = {
           enable = true;
         };
+        setOptions = [
+          "NO_NOMATCH"
+        ];
         syntaxHighlighting = {
           enable = true;
         };
