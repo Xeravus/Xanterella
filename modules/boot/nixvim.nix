@@ -82,14 +82,6 @@
           }
           {
             mode = "n";
-            key = "<leader>ff";
-            action = "<cmd>lua Snacks.picker.files()<CR>";
-            options = {
-              desc = "Find Files";
-            };
-          }
-          {
-            mode = "n";
             key = "leader>fg";
             action = "<cmd>lua Snacks.picker.grep()<CR>";
             options = {
@@ -121,11 +113,19 @@
             };
           }
           {
-            mode = ["n" "i"];
-            key = "<C-n>";
+            mode = "n";
+            key = "<leader>ff";
             action = "<cmd>lua Snacks.explorer()<CR>";
             options = {
               desc = "Explorer";
+            };
+          }
+          {
+            mode = ["n" "i"];
+            key = "<C-n>";
+            action = "<cmd>lua Snacks.picker.files()<CR>";
+            options = {
+              desc = "Find Files";
             };
           }
         ];
@@ -159,9 +159,6 @@
             enable = true;
           };
           gitsigns = {
-            enable = true;
-          };
-          lazygit = {
             enable = true;
           };
           web-devicons = {
