@@ -196,6 +196,28 @@
               };
               dashboard = {
                 enable = true;
+                sections = [
+                  {section = "header";}
+                  {
+                    section = "keys";
+                    gap = 1;
+                    padding = 1;
+                  }
+                  {
+                    section = "recent_files";
+                    icon = " ";
+                    title = "Letzte Dateien";
+                    indent = 2;
+                    padding = 1;
+                  }
+                  {
+                    section = "projects";
+                    icon = " ";
+                    title = "Projekte";
+                    indent = 2;
+                    padding = 1;
+                  }
+                ];
               };
             };
           };
