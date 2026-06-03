@@ -4,8 +4,6 @@
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
-
     ./../../modules
     ./../../profiles/boot.nix
     ./../../profiles/essentials.nix
