@@ -1,6 +1,7 @@
 {
   imports = [
     ./audio.nix
+    ./nix-warper.nix
     ./bluetooth.nix
     ./btop.nix
     ./dbus.nix

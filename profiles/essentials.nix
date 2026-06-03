@@ -23,6 +23,9 @@
       direnv = {
         enable = true;
       };
+      nix-warper = {
+        enable = true;
+      };
       firewall = {
         enable = true;
       };
