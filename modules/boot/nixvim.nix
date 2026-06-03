@@ -29,6 +29,9 @@
       nixvim = {
         enable = true;
         defaultEditor = true;
+        globals = {
+          mapleader = " ";
+        };
         opts = {
           number = true;
           relativenumber = true;
@@ -77,6 +80,54 @@
               desc = "Aktuellen Tab schließen";
             };
           }
+          {
+            mode = "n";
+            key = "<leader>ff";
+            action = "<cmd>lua Snacks.picker.files()<CR>";
+            options = {
+              desc = "Find Files";
+            };
+          }
+          {
+            mode = "n";
+            key = "leader>fg";
+            action = "<cmd>lua Snacks.picker.grep()<CR>";
+            options = {
+              desc = "Live Grep";
+            };
+          }
+          {
+            mode = "n";
+            key = "<leader>fp";
+            action = "<cmd>lua Snacks.picker.projects()<CR>";
+            options = {
+              desc = "Projects";
+            };
+          }
+          {
+            mode = ["n" "t"];
+            key = "<leader>t";
+            action = "<cmd>lua Snacks.terminal.toggle()<CR>";
+            options = {
+              desc = "Terminal umschalten";
+            };
+          }
+          {
+            mode = "n";
+            key = "<leader>gg";
+            action = "<cmd>lua Snacks.lazygit()<CR>";
+            options = {
+              desc = "Lazygit öffnen";
+            };
+          }
+          {
+            mode = ["n" "i"];
+            key = "<C-n>";
+            action = "<cmd>lua Snacks.explorer()<CR>";
+            options = {
+              desc = "Explorer";
+            };
+          }
         ];
 
         colorschemes = {
@@ -85,15 +136,11 @@
             autoLoad = true;
           };
         };
-
         plugins = {
           lualine = {
             enable = true;
           };
           treesitter = {
-            enable = true;
-          };
-          neo-tree = {
             enable = true;
           };
           bufferline = {
@@ -120,7 +167,43 @@
           web-devicons = {
             enable = true;
           };
+          snacks = {
+            enable = true;
+            settings = {
+              bigfile = {
+                enable = true;
+              };
+              notifier = {
+                enable = true;
+              };
+              terminal = {
+                enable = true;
+              };
+              lazygit = {
+                enable = true;
+              };
+              quickfile = {
+                enable = true;
+              };
+              statuscolumn = {
+                enable = true;
+              };
+              words = {
+                enable = true;
+              };
+              picker = {
+                enable = true;
+              };
+              explorer = {
+                enable = true;
+              };
+              dashboard = {
+                enable = true;
+              };
+            };
+          };
           conform-nvim = {
+            enable = true;
             settings = {
               format_on_save = {
                 lsp_fallback = true;
@@ -133,30 +216,6 @@
                 nix = [
                   "alejandra"
                 ];
-              };
-            };
-          };
-          telescope = {
-            enable = true;
-            autoLoad = true;
-            keymaps = {
-              "<C-n>" = "find_files";
-              "<A-f>" = "live_grep";
-            };
-            settings = {
-              defaults = {
-                file_ignore_patterns = [
-                  "^.git/"
-                  "%.lock"
-                ];
-              };
-              extensions = {
-                live-grep-args = {
-                  enable = true;
-                };
-                file-browser = {
-                  enable = true;
-                };
               };
             };
           };
