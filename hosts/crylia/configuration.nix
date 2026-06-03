@@ -6,6 +6,8 @@
   imports = [
     ./hardware-configuration.nix
 
+    ./hardware-configuration.nix
+
     ./../../modules
     ./../../profiles/boot.nix
     ./../../profiles/essentials.nix
