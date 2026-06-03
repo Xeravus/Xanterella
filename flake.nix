@@ -111,7 +111,7 @@
       };
       installer = nixpkgs.lib.nixosSystem {
         system = systemarch;
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs pkgs-unstable;};
         modules = [
           ./hosts/installer/configuration.nix
           ./profiles/ssh-keys.nix
