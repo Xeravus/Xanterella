@@ -1,0 +1,20 @@
+{
+  imports = [
+    ./hyprland
+    ./gnome
+    ./browser.nix
+    ./brightnessctl.nix
+    ./cava.nix
+    ./kitty.nix
+    ./nix-switcher.nix
+    ./nix-timetracker.nix
+    ./plymouth.nix
+    ./power-profiles-daemon.nix
+    ./psmisc.nix
+    ./pulsemixer.nix
+    ./quickshell.nix
+    ./screenshots.nix
+    ./tldr.nix
+    ./yazi.nix
+  ];
+}

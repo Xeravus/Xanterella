@@ -1,0 +1,20 @@
+{
+  imports = [
+    ./audio.nix
+    ./nix-warper.nix
+    ./bluetooth.nix
+    ./btop.nix
+    ./dbus.nix
+    ./firewall.nix
+    ./geistmono.nix
+    ./utils.nix
+    ./libnotify.nix
+    ./sl.nix
+    ./tailscale.nix
+    ./tree.nix
+    ./upower.nix
+    ./wget.nix
+    ./zip.nix
+    ./shells.nix
+  ];
+}
